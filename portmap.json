@@ -1,0 +1,6 @@
+{
+  "couch0-0": "5984:5984",
+  "orderer.orderer.net": "7050:7050",
+  "peer0.firstcorp.net-0": "7051:7051",
+  "peer0.firstcorp.net-1": "7053:7053"
+}

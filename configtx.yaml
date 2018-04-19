@@ -1,0 +1,55 @@
+
+Profiles:
+
+    OrdererGenesis:
+        Orderer:
+            <<: *OrdererDefaults
+            Organizations:
+                - *OrdererOrg
+        Consortiums:
+          OneOrgConsortium:
+             Organizations:
+                - *FirstCorpOrg
+                
+    
+    
+    scmChannel:
+        Consortium: OneOrgConsortium
+        Application:
+            <<: *ApplicationDefaults
+            Organizations:
+                - *FirstCorpOrg
+                
+     
+Organizations:
+    - &OrdererOrg
+        Name: OrdererMSP
+        ID: OrdererMSP
+        MSPDir: crypto-config/ordererOrganizations/orderer.net/msp
+    
+    - &FirstCorpOrg
+        Name: FirstCorpMSP
+        ID: FirstCorpMSP
+        MSPDir: crypto-config/peerOrganizations/firstcorp.net/msp
+        AnchorPeers:
+          - Host: peer0.firstcorp.net
+            Port: 7051
+        
+
+Orderer: &OrdererDefaults
+        OrdererType: solo
+        Addresses:
+          - orderer.orderer.net:7050
+        BatchTimeout: 2s
+        BatchSize:
+          MaxMessageCount: 10
+          AbsoluteMaxBytes: 98 MB
+          PreferredMaxBytes: 512 KB
+        Kafka:
+          Brokers:
+            - 127.0.0.1:9092
+        Organizations:
+
+    
+Application: &ApplicationDefaults
+    Organizations:

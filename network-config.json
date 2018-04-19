@@ -1,0 +1,22 @@
+{
+    "orderers":{
+        "name" :"Orderer","mspID":"OrdererMSP","domain":"orderer.net","ordererHostname":"orderer","SANS":"localhost","type":"solo"
+    },
+    "addCA":"false",
+    "orgs":[
+        { 
+            "name" :"FirstCorp",
+            "domain":"firstcorp.net",
+            "mspID":"FirstCorpMSP",
+            "SANS":"localhost",
+            "peerCount":1,
+            "userCount":1
+        }
+        ],
+    "consortium":"OneOrgConsortium",
+    "channels" :[
+                    {"channelName":"scm","orgs":["FirstCorp"] }
+                ],
+    "chaincodes":[{"channelName":"scm","ccid":"scm","version":"1.0","src":"github.com/scm","participants":["FirstCorp"]}]            
+                
+}

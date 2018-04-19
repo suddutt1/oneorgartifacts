@@ -1,0 +1,19 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "WX1+2gktHcBmE9MGwFSGs7oqexU=",
+			"path": "github.com/golang/protobuf/proto",
+			"revision": "bbd03ef6da3a115852eaf24c8a1c46aeb39aa175",
+			"revisionTime": "2018-02-02T18:43:18Z"
+		},
+		{
+			"checksumSHA1": "CyBIW6JzdsObZEmbRgruKsmhUEQ=",
+			"path": "github.com/hyperledger/fabric/protos/msp",
+			"revision": "5bf93a89fe58313fcd1c320e3d6f86a78b9cef71",
+			"revisionTime": "2018-03-09T13:55:50Z"
+		}
+	],
+	"rootPath": "github.com/suddutt1/chaincode"
+}

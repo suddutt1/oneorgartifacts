@@ -1,0 +1,16 @@
+OrdererOrgs:
+- Domain: orderer.net
+  Name: Orderer
+  Specs:
+  - SANS:
+    - localhost
+  - Hostname: orderer
+PeerOrgs:
+- Domain: firstcorp.net
+  Name: FirstCorp
+  Template:
+    Count: 1
+    SANS:
+    - localhost
+  Users:
+    Count: 1
